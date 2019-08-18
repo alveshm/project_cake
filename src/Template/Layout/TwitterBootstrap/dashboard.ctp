@@ -3,6 +3,7 @@
 use Cake\Core\Configure;
 
 $this->Html->css('BootstrapUI.dashboard', ['block' => true]);
+$this->prepend('css', $this->Html->css(['style']));
 $this->prepend('tb_body_attrs', ' class="' . implode(' ', [$this->request->getParam('controller'), $this->request->getParam('action')]) . '" ');
 $this->start('tb_body_start');
 ?>

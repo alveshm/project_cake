@@ -41,18 +41,20 @@ $this->end();
 <fieldset>
     <legend><?= __('Editar {0}', ['Produto']) ?></legend>
     <?php
-    echo $this->Form->control('name',['label' => 'Nome']);
-    echo $this->Form->label('unidade_medida', 'Unidades de medida');
-    $unidades = ['lt' => 'Litro', 'kg' => 'Quilograma', 'un' => 'Unidade'];
-    echo $this->Form->select('unidade_medida', $unidades, ['default' => 'lt'], ['label' => 'Unidades de Medida']);
-    echo $this->Form->control('quantidade');
-    echo $this->Form->control('price',['label' => 'Preco']);
-    echo '<div class="form-group" style="input[name="perecivel"] {margin: 9px;}">';
-    echo $this->Form->label('peresivel', 'Produto perecível');
-    echo $this->Form->radio('peresivel', ['Sim', 'Nao']);
-    echo '</div>';
-    echo $this->Form->control('dt_valid',['label' => 'Data de Validade']);
-    echo $this->Form->control('dt_frab',['label' => 'Data de Fabricacao']);
+        echo $this->Form->control('name',['label' => 'Nome']);
+        echo $this->Form->label('unidade_medida', 'Unidades de medida');
+        $unidades = ['lt' => 'Litro', 'kg' => 'Quilograma', 'un' => 'Unidade'];
+        echo $this->Form->select('unidade_medida', $unidades, ['default' => 'lt'], ['label' => 'Unidades de Medida']);
+        echo $this->Form->control('quantidade', ['required' => false]);
+        $monetario = ['usd' => '$', 'eur' => '€', 'brl' => 'R$'];
+        echo $this->Form->select('unidade_monetaria', $monetario, ['default' => 'brl']);
+        echo $this->Form->control('price',['label' => 'Preco']);
+        echo $this->Form->label('peresivel', 'Produto perecível');
+        echo '<div class="form-group">';
+        echo $this->Form->radio('peresivel', ['Sim', 'Nao']);
+        echo '</div>';
+        echo $this->Form->control('dt_valid',['label' => 'Data de Validade','required' => false]);
+        echo $this->Form->control('dt_frab',['label' => 'Data de Fabricacao']);
     ?>
 </fieldset>
 <?= $this->Form->button(__("Salvar")); ?>

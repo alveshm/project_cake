@@ -8,12 +8,13 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property string $name
- * @property float $price
+ * @property string $price
  * @property string $dt_valid
  * @property string $dt_frab
  * @property string $quantidade
  * @property string $unidade_medida
  * @property string $peresivel
+ * @property string $unidade_monetaria
  */
 class Product extends Entity
 {
@@ -33,6 +34,7 @@ class Product extends Entity
         'dt_frab' => true,
         'quantidade' => true,
         'unidade_medida' => true,
-        'peresivel' => true
+        'peresivel' => true,
+        'unidade_monetaria' => true
     ];
 }
