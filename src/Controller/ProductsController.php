@@ -48,6 +48,8 @@ class ProductsController extends AppController
     public function add()
     {
         $product = $this->Products->newEntity();
+        var_dump($product);
+        die();
         if ($this->request->is('post')) {
             $product = $this->Products->patchEntity($product, $this->request->getData());
             if ($this->Products->save($product)) {

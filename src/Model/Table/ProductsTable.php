@@ -56,13 +56,13 @@ class ProductsTable extends Table
         $validator
             ->scalar('price')
             ->maxLength('price', 255)
-            ->requirePresence('price', 'create');
+            ->requirePresence('price', 'create')
+            ->notEmptyString('price');
 
         $validator
             ->scalar('dt_valid')
             ->maxLength('dt_valid', 255)
-            ->requirePresence('dt_valid', 'create')
-            ->notEmptyString('dt_valid');
+            ->allowEmptyString('dt_valid');
 
         $validator
             ->scalar('dt_frab')
@@ -73,7 +73,7 @@ class ProductsTable extends Table
         $validator
             ->scalar('quantidade')
             ->maxLength('quantidade', 255)
-            ->requirePresence('quantidade', 'create');
+            ->allowEmptyString('quantidade');
 
         $validator
             ->scalar('unidade_medida')

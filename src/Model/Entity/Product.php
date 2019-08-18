@@ -9,9 +9,9 @@ use Cake\ORM\Entity;
  * @property int $id
  * @property string $name
  * @property string $price
- * @property string $dt_valid
+ * @property string|null $dt_valid
  * @property string $dt_frab
- * @property string $quantidade
+ * @property string|null $quantidade
  * @property string $unidade_medida
  * @property string $peresivel
  * @property string $unidade_monetaria
