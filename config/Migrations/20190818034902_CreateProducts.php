@@ -22,12 +22,29 @@ class CreateProducts extends AbstractMigration
             'default' => null,
             'null' => false,
         ]);
-        $table->addColumn('dt_valid', 'datetime', [
+        $table->addColumn('dt_valid', 'string', [
             'default' => null,
+            'limit' => 255,
             'null' => false,
         ]);
-        $table->addColumn('dt_frab', 'datetime', [
+        $table->addColumn('dt_frab', 'string', [
             'default' => null,
+            'limit' => 255,
+            'null' => false,
+        ]);
+        $table->addColumn('quantidade', 'string', [
+            'default' => null,
+            'limit' => 255,
+            'null' => false,
+        ]);
+        $table->addColumn('unidade_medida', 'string', [
+            'default' => null,
+            'limit' => 255,
+            'null' => false,
+        ]);
+        $table->addColumn('peresivel', 'string', [
+            'default' => null,
+            'limit' => 255,
             'null' => false,
         ]);
         $table->create();

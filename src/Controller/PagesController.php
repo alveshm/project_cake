@@ -40,9 +40,10 @@ class PagesController extends AppController
      */
     public function display(...$path)
     {
+        return $this->redirect('/products');
         $count = count($path);
         if (!$count) {
-            return $this->redirect('/');
+            return $this->redirect('/products');
         }
         if (in_array('..', $path, true) || in_array('.', $path, true)) {
             throw new ForbiddenException();

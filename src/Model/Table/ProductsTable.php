@@ -59,14 +59,30 @@ class ProductsTable extends Table
             ->notEmptyString('price');
 
         $validator
-            ->dateTime('dt_valid')
-            ->requirePresence('dt_valid', 'create')
-            ->notEmptyDateTime('dt_valid');
+            ->scalar('dt_valid')
+            ->maxLength('dt_valid', 255);
 
         $validator
-            ->dateTime('dt_frab')
+            ->scalar('dt_frab')
+            ->maxLength('dt_frab', 255)
             ->requirePresence('dt_frab', 'create')
-            ->notEmptyDateTime('dt_frab');
+            ->notEmptyString('dt_frab');
+
+        $validator
+            ->scalar('quantidade')
+            ->maxLength('quantidade', 255);
+
+        $validator
+            ->scalar('unidade_medida')
+            ->maxLength('unidade_medida', 255)
+            ->requirePresence('unidade_medida', 'create')
+            ->notEmptyString('unidade_medida');
+
+        $validator
+            ->scalar('peresivel')
+            ->maxLength('peresivel', 255)
+            ->requirePresence('peresivel', 'create')
+            ->notEmptyString('peresivel');
 
         return $validator;
     }

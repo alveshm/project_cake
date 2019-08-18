@@ -9,8 +9,11 @@ use Cake\ORM\Entity;
  * @property int $id
  * @property string $name
  * @property float $price
- * @property \Cake\I18n\FrozenTime $dt_valid
- * @property \Cake\I18n\FrozenTime $dt_frab
+ * @property string $dt_valid
+ * @property string $dt_frab
+ * @property string $quantidade
+ * @property string $unidade_medida
+ * @property string $peresivel
  */
 class Product extends Entity
 {
@@ -27,6 +30,9 @@ class Product extends Entity
         'name' => true,
         'price' => true,
         'dt_valid' => true,
-        'dt_frab' => true
+        'dt_frab' => true,
+        'quantidade' => true,
+        'unidade_medida' => true,
+        'peresivel' => true
     ];
 }

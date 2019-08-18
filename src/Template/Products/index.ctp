@@ -1,53 +1,46 @@
 <?php
-/**
- * @var \App\View\AppView $this
- * @var \App\Model\Entity\Product[]|\Cake\Collection\CollectionInterface $products
- */
+/* @var $this \Cake\View\View */
+$this->extend('../Layout/TwitterBootstrap/dashboard');
+$this->start('tb_actions');
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Product'), ['action' => 'add']) ?></li>
+    <li><?= $this->Html->link(__('Novo Produto'), ['action' => 'add']); ?></li>
+<?php $this->end(); ?>
+<?php $this->assign('tb_sidebar', '<ul class="nav nav-sidebar">' . $this->fetch('tb_actions') . '</ul>'); ?>
+
+<table class="table table-striped" cellpadding="0" cellspacing="0">
+    <thead>
+        <tr>
+            <th><?= $this->Paginator->sort('id'); ?></th>
+            <th><?= $this->Paginator->sort('Nome'); ?></th>
+            <th><?= $this->Paginator->sort('Preco'); ?></th>
+            <th><?= $this->Paginator->sort('Validade'); ?></th>
+            <th><?= $this->Paginator->sort('Fabricacao'); ?></th>
+            <th><?= $this->Paginator->sort('Quantidade'); ?></th>
+            <th class="actions"><?= __('Actions'); ?></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($products as $product): ?>
+        <tr>
+            <td><?= $this->Number->format($product->id) ?></td>
+            <td><?= h($product->name) ?></td>
+            <td><?= $this->Number->format($product->price) ?></td>
+            <td><?= h($product->dt_valid) ?></td>
+            <td><?= h($product->dt_frab) ?></td>
+            <td><?= h($product->quantidade) ?></td>
+            <td class="actions">
+                <?= $this->Html->link('', ['action' => 'view', $product->id], ['title' => __('View'), 'class' => 'btn btn-default glyphicon glyphicon-eye-open']) ?>
+                <?= $this->Html->link('', ['action' => 'edit', $product->id], ['title' => __('Edit'), 'class' => 'btn btn-default glyphicon glyphicon-pencil']) ?>
+                <?= $this->Form->postLink('', ['action' => 'delete', $product->id], ['confirm' => __('Voce Realmente deseja excluir este produto # {0}?', $product->id), 'title' => __('Delete'), 'class' => 'btn btn-default glyphicon glyphicon-trash']) ?>
+            </td>
+        </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+<div class="paginator">
+    <ul class="pagination">
+        <?= $this->Paginator->prev('< ' . __('Anterior')) ?>
+        <?= $this->Paginator->numbers(['before' => '', 'after' => '']) ?>
+        <?= $this->Paginator->next(__('Proximo') . ' >') ?>
     </ul>
-</nav>
-<div class="products index large-9 medium-8 columns content">
-    <h3><?= __('Products') ?></h3>
-    <table cellpadding="0" cellspacing="0">
-        <thead>
-            <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('name') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('price') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('dt_valid') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('dt_frab') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($products as $product): ?>
-            <tr>
-                <td><?= $this->Number->format($product->id) ?></td>
-                <td><?= h($product->name) ?></td>
-                <td><?= $this->Number->format($product->price) ?></td>
-                <td><?= h($product->dt_valid) ?></td>
-                <td><?= h($product->dt_frab) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $product->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $product->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $product->id], ['confirm' => __('Are you sure you want to delete # {0}?', $product->id)]) ?>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-    <div class="paginator">
-        <ul class="pagination">
-            <?= $this->Paginator->first('<< ' . __('first')) ?>
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
-            <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-            <?= $this->Paginator->last(__('last') . ' >>') ?>
-        </ul>
-        <p><?= $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')]) ?></p>
-    </div>
 </div>
