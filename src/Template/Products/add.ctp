@@ -9,14 +9,14 @@ $this->extend('../Layout/TwitterBootstrap/dashboard');
 $this->prepend('css', $this->Html->css(['jquery-ui']));
 $this->start('tb_actions');
 ?>
-    <li><?= $this->Html->link(__('List Products'), ['action' => 'index']) ?></li>
+    <li><?= $this->Html->link(__('Lista de Produtos'), ['action' => 'index']) ?></li>
 <?php
 $this->end();
 
 $this->start('tb_sidebar');
 ?>
 <ul class="nav nav-sidebar">
-    <li><?= $this->Html->link(__('List Products'), ['action' => 'index']) ?></li>
+    <li><?= $this->Html->link(__('Lista de Produtos'), ['action' => 'index']) ?></li>
 </ul>
 <?php
 $this->end();

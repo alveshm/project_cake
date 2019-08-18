@@ -4,7 +4,6 @@ $('input[name=name]').focusout(function() {
         alert('Nome maior que o permitido');
     }
 });
-$( 'input[name=dt_valid]' ).datepicker().setLocale('pt-BR');
 $( 'input[name=dt_valid]' ).datepicker({format: 'd/m/Y H:i'});
 $( 'input[name=dt_frab]' ).datepicker();
 $('input[name=dt_valid]').mask("00r00r0000", {
