@@ -54,7 +54,7 @@ class ProductsTable extends Table
             ->notEmptyString('name');
 
         $validator
-            ->numeric('price')
+            ->scalar('price')
             ->requirePresence('price', 'create')
             ->notEmptyString('price');
 

@@ -18,8 +18,9 @@ class CreateProducts extends AbstractMigration
             'limit' => 255,
             'null' => false,
         ]);
-        $table->addColumn('price', 'float', [
+        $table->addColumn('price', 'string', [
             'default' => null,
+            'limit' => 255,
             'null' => false,
         ]);
         $table->addColumn('dt_valid', 'string', [
