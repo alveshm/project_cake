@@ -1,0 +1,373 @@
+2019-08-18 01:12:47 Error: [RuntimeException] Unknown command `cake migration`. Run `cake --help` to get the list of valid commands. in C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php on line 346
+Stack Trace:
+#0 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(157): Cake\Console\CommandRunner->resolveName(Object(Cake\Console\CommandCollection), Object(Cake\Console\ConsoleIo), 'migration')
+#1 C:\xampp\htdocs\project_cake\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#2 {main}
+
+
+2019-08-18 02:39:26 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'project_cake.products' doesn't exist in C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 133
+Stack Trace:
+#0 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(99): Cake\Database\Schema\Collection->_reflect('Column', 'products', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('products', Array)
+#2 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\ORM\Table.php(560): Cake\Database\Schema\CachedCollection->describe('products')
+#3 C:\xampp\htdocs\project_cake\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(325): Cake\ORM\Table->getSchema()
+#4 C:\xampp\htdocs\project_cake\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(222): Bake\Shell\Task\ModelTask->findBelongsTo(Object(App\Model\Table\ProductsTable), Array)
+#5 C:\xampp\htdocs\project_cake\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(App\Model\Table\ProductsTable))
+#6 C:\xampp\htdocs\project_cake\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(App\Model\Table\ProductsTable), 'products', 'Products')
+#7 C:\xampp\htdocs\project_cake\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Products')
+#8 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\ModelTask->main('products')
+#9 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#10 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#11 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#12 C:\xampp\htdocs\project_cake\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#13 {main}
+
+
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'project_cake.products' doesn't exist in C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 39
+Stack Trace:
+#0 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Database\Connection.php(350): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#3 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Database\Connection.php(353): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Database\Connection.php(302): Cake\Database\Connection->query('SHOW FULL COLUM...')
+#5 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#6 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Database\Connection.php(306): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(131): Cake\Database\Connection->execute('SHOW FULL COLUM...', Array)
+#8 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(99): Cake\Database\Schema\Collection->_reflect('Column', 'products', Array, Object(Cake\Database\Schema\TableSchema))
+#9 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('products', Array)
+#10 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\ORM\Table.php(560): Cake\Database\Schema\CachedCollection->describe('products')
+#11 C:\xampp\htdocs\project_cake\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(325): Cake\ORM\Table->getSchema()
+#12 C:\xampp\htdocs\project_cake\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(222): Bake\Shell\Task\ModelTask->findBelongsTo(Object(App\Model\Table\ProductsTable), Array)
+#13 C:\xampp\htdocs\project_cake\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(App\Model\Table\ProductsTable))
+#14 C:\xampp\htdocs\project_cake\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(App\Model\Table\ProductsTable), 'products', 'Products')
+#15 C:\xampp\htdocs\project_cake\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Products')
+#16 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\ModelTask->main('products')
+#17 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#18 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#19 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#20 C:\xampp\htdocs\project_cake\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#21 {main}
+
+
+2019-08-18 02:41:08 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'project_cake.products' doesn't exist in C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php on line 167
+Stack Trace:
+#0 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(167): PDO->exec('ALTER TABLE `pr...')
+#1 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Util\AlterInstructions.php(126): Phinx\Db\Adapter\PdoAdapter->execute('ALTER TABLE `pr...')
+#2 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(572): Phinx\Db\Util\AlterInstructions->execute('ALTER TABLE `pr...', Array)
+#3 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(931): Phinx\Db\Adapter\PdoAdapter->executeAlterSteps('products', Object(Phinx\Db\Util\AlterInstructions))
+#4 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\AdapterWrapper.php(497): Phinx\Db\Adapter\PdoAdapter->executeActions(Object(Phinx\Db\Table\Table), Array)
+#5 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\TimedOutputAdapter.php(406): Phinx\Db\Adapter\AdapterWrapper->executeActions(Object(Phinx\Db\Table\Table), Array)
+#6 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\AdapterWrapper.php(497): Phinx\Db\Adapter\TimedOutputAdapter->executeActions(Object(Phinx\Db\Table\Table), Array)
+#7 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Plan\Plan.php(161): Phinx\Db\Adapter\AdapterWrapper->executeActions(Object(Phinx\Db\Table\Table), Array)
+#8 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(65): Phinx\Db\Plan\Plan->Phinx\Db\Plan\{closure}(Object(Phinx\Db\Plan\AlterTable), 0)
+#9 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Plan\Plan.php(162): Cake\Collection\Collection->each(Object(Closure))
+#10 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\ProxyAdapter.php(142): Phinx\Db\Plan\Plan->executeInverse(Object(Migrations\CakeAdapter))
+#11 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Migration\Manager\Environment.php(121): Phinx\Db\Adapter\ProxyAdapter->executeInvertedCommands()
+#12 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(391): Phinx\Migration\Manager\Environment->executeMigration(Object(AddPeresivelToProducts), 'down', false)
+#13 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(533): Phinx\Migration\Manager->executeMigration('default', Object(AddPeresivelToProducts), 'down', false)
+#14 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Console\Command\Rollback.php(130): Phinx\Migration\Manager->rollback('default', 20190818012218, false, true, false)
+#15 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Command\CommandTrait.php(35): Phinx\Console\Command\Rollback->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Command\Rollback.php(68): Migrations\Command\Rollback->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\xampp\htdocs\project_cake\vendor\symfony\console\Command\Command.php(255): Migrations\Command\Rollback->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(921): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(273): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Rollback), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(149): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(109): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\Shell.php(532): Migrations\Shell\MigrationsShell->main('migrations', 'rollback')
+#23 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(165): Cake\Console\Shell->runCommand(Array, true, Array)
+#24 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#25 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Migrations\Shell\MigrationsShell), Array)
+#26 C:\xampp\htdocs\project_cake\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#27 {main}
+
+
+2019-08-18 06:19:53 Error: [RuntimeException] Unknown command `cake migration_diff`. Run `cake --help` to get the list of valid commands. in C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php on line 346
+Stack Trace:
+#0 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(157): Cake\Console\CommandRunner->resolveName(Object(Cake\Console\CommandCollection), Object(Cake\Console\ConsoleIo), 'migration_diff')
+#1 C:\xampp\htdocs\project_cake\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#2 {main}
+
+
+2019-08-18 06:22:57 Error: [Symfony\Component\Console\Exception\RuntimeException] Too many arguments, expected arguments "command". in C:\xampp\htdocs\project_cake\vendor\symfony\console\Input\ArgvInput.php on line 183
+Stack Trace:
+#0 C:\xampp\htdocs\project_cake\vendor\symfony\console\Input\ArgvInput.php(86): Symfony\Component\Console\Input\ArgvInput->parseArgument('CreateProducts')
+#1 C:\xampp\htdocs\project_cake\vendor\symfony\console\Input\Input.php(55): Symfony\Component\Console\Input\ArgvInput->parse()
+#2 C:\xampp\htdocs\project_cake\vendor\symfony\console\Command\Command.php(214): Symfony\Component\Console\Input\Input->bind(Object(Symfony\Component\Console\Input\InputDefinition))
+#3 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(921): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(273): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(149): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(109): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\Shell.php(532): Migrations\Shell\MigrationsShell->main('migrations', 'migrate', 'CreateProducts')
+#8 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(165): Cake\Console\Shell->runCommand(Array, true, Array)
+#9 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#10 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Migrations\Shell\MigrationsShell), Array)
+#11 C:\xampp\htdocs\project_cake\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#12 {main}
+
+
+2019-08-18 06:27:26 Error: [RuntimeException] Unknown command `cake schema`. Run `cake --help` to get the list of valid commands. in C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php on line 346
+Stack Trace:
+#0 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(157): Cake\Console\CommandRunner->resolveName(Object(Cake\Console\CommandCollection), Object(Cake\Console\ConsoleIo), 'schema')
+#1 C:\xampp\htdocs\project_cake\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#2 {main}
+
+
+2019-08-18 06:35:47 Error: [Symfony\Component\Console\Exception\RuntimeException] Too many arguments, expected arguments "command". in C:\xampp\htdocs\project_cake\vendor\symfony\console\Input\ArgvInput.php on line 183
+Stack Trace:
+#0 C:\xampp\htdocs\project_cake\vendor\symfony\console\Input\ArgvInput.php(86): Symfony\Component\Console\Input\ArgvInput->parseArgument('all')
+#1 C:\xampp\htdocs\project_cake\vendor\symfony\console\Input\Input.php(55): Symfony\Component\Console\Input\ArgvInput->parse()
+#2 C:\xampp\htdocs\project_cake\vendor\symfony\console\Command\Command.php(214): Symfony\Component\Console\Input\Input->bind(Object(Symfony\Component\Console\Input\InputDefinition))
+#3 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(921): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(273): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(149): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(109): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\Shell.php(532): Migrations\Shell\MigrationsShell->main('migrations', 'migrate', 'all')
+#8 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(165): Cake\Console\Shell->runCommand(Array, true, Array)
+#9 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#10 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Migrations\Shell\MigrationsShell), Array)
+#11 C:\xampp\htdocs\project_cake\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#12 {main}
+
+
+2019-08-18 06:58:04 Error: [Symfony\Component\Console\Exception\RuntimeException] Too many arguments, expected arguments "command". in C:\xampp\htdocs\project_cake\vendor\symfony\console\Input\ArgvInput.php on line 183
+Stack Trace:
+#0 C:\xampp\htdocs\project_cake\vendor\symfony\console\Input\ArgvInput.php(86): Symfony\Component\Console\Input\ArgvInput->parseArgument('20190818034902')
+#1 C:\xampp\htdocs\project_cake\vendor\symfony\console\Input\Input.php(55): Symfony\Component\Console\Input\ArgvInput->parse()
+#2 C:\xampp\htdocs\project_cake\vendor\symfony\console\Command\Command.php(214): Symfony\Component\Console\Input\Input->bind(Object(Symfony\Component\Console\Input\InputDefinition))
+#3 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(921): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(273): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(149): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(109): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\Shell.php(532): Migrations\Shell\MigrationsShell->main('migrations', 'migrate', '20190818034902')
+#8 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(165): Cake\Console\Shell->runCommand(Array, true, Array)
+#9 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#10 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Migrations\Shell\MigrationsShell), Array)
+#11 C:\xampp\htdocs\project_cake\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#12 {main}
+
+
+2019-08-18 06:58:09 Error: [Symfony\Component\Console\Exception\CommandNotFoundException] Command "20190818034902" is not defined. in C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php on line 652
+Stack Trace:
+#0 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(237): Symfony\Component\Console\Application->find('20190818034902')
+#1 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(149): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(109): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\Shell.php(532): Migrations\Shell\MigrationsShell->main('migrations', '20190818034902')
+#4 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(165): Cake\Console\Shell->runCommand(Array, true, Array)
+#5 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#6 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Migrations\Shell\MigrationsShell), Array)
+#7 C:\xampp\htdocs\project_cake\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#8 {main}
+
+
+2019-08-18 07:03:06 Error: [Symfony\Component\Console\Exception\RuntimeException] Too many arguments, expected arguments "command". in C:\xampp\htdocs\project_cake\vendor\symfony\console\Input\ArgvInput.php on line 183
+Stack Trace:
+#0 C:\xampp\htdocs\project_cake\vendor\symfony\console\Input\ArgvInput.php(86): Symfony\Component\Console\Input\ArgvInput->parseArgument('CreateProducts')
+#1 C:\xampp\htdocs\project_cake\vendor\symfony\console\Input\Input.php(55): Symfony\Component\Console\Input\ArgvInput->parse()
+#2 C:\xampp\htdocs\project_cake\vendor\symfony\console\Command\Command.php(214): Symfony\Component\Console\Input\Input->bind(Object(Symfony\Component\Console\Input\InputDefinition))
+#3 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(921): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(273): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(149): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(109): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\Shell.php(532): Migrations\Shell\MigrationsShell->main('migrations', 'migrate', 'CreateProducts', 'name:string', 'price:float', 'dt_valid:string', 'dt_frab:string', 'quantidade:stri...', 'unidade_medida', 'peresivel:numbe...')
+#8 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(165): Cake\Console\Shell->runCommand(Array, true, Array)
+#9 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#10 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Migrations\Shell\MigrationsShell), Array)
+#11 C:\xampp\htdocs\project_cake\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#12 {main}
+
+
+2019-08-18 13:33:23 Error: [Symfony\Component\Console\Exception\CommandNotFoundException] Command "up" is not defined. in C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php on line 652
+Stack Trace:
+#0 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(237): Symfony\Component\Console\Application->find('up')
+#1 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(149): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(109): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\Shell.php(532): Migrations\Shell\MigrationsShell->main('migrations', 'up')
+#4 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(165): Cake\Console\Shell->runCommand(Array, true, Array)
+#5 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#6 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Migrations\Shell\MigrationsShell), Array)
+#7 C:\xampp\htdocs\project_cake\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#8 {main}
+
+
+2019-08-18 13:33:33 Error: [Symfony\Component\Console\Exception\RuntimeException] Too many arguments, expected arguments "command". in C:\xampp\htdocs\project_cake\vendor\symfony\console\Input\ArgvInput.php on line 183
+Stack Trace:
+#0 C:\xampp\htdocs\project_cake\vendor\symfony\console\Input\ArgvInput.php(86): Symfony\Component\Console\Input\ArgvInput->parseArgument('up')
+#1 C:\xampp\htdocs\project_cake\vendor\symfony\console\Input\Input.php(55): Symfony\Component\Console\Input\ArgvInput->parse()
+#2 C:\xampp\htdocs\project_cake\vendor\symfony\console\Command\Command.php(214): Symfony\Component\Console\Input\Input->bind(Object(Symfony\Component\Console\Input\InputDefinition))
+#3 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(921): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(273): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(149): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(109): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\Shell.php(532): Migrations\Shell\MigrationsShell->main('migrations', 'migrate', 'up')
+#8 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(165): Cake\Console\Shell->runCommand(Array, true, Array)
+#9 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#10 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Migrations\Shell\MigrationsShell), Array)
+#11 C:\xampp\htdocs\project_cake\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#12 {main}
+
+
+2019-08-18 14:06:27 Error: [Symfony\Component\Console\Exception\RuntimeException] Not enough arguments (missing: "name"). in C:\xampp\htdocs\project_cake\vendor\symfony\console\Input\Input.php on line 76
+Stack Trace:
+#0 C:\xampp\htdocs\project_cake\vendor\symfony\console\Command\Command.php(250): Symfony\Component\Console\Input\Input->validate()
+#1 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(921): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(273): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Create), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(149): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(109): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\Shell.php(532): Migrations\Shell\MigrationsShell->main('migrations', 'create')
+#6 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(165): Cake\Console\Shell->runCommand(Array, true, Array)
+#7 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#8 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Migrations\Shell\MigrationsShell), Array)
+#9 C:\xampp\htdocs\project_cake\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#10 {main}
+
+
+2019-08-18 14:11:23 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'project_cake.products' in C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php on line 167
+Stack Trace:
+#0 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(167): PDO->exec('DROP TABLE `pro...')
+#1 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Util\AlterInstructions.php(137): Phinx\Db\Adapter\PdoAdapter->execute('DROP TABLE `pro...')
+#2 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(572): Phinx\Db\Util\AlterInstructions->execute('ALTER TABLE `pr...', Array)
+#3 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(931): Phinx\Db\Adapter\PdoAdapter->executeAlterSteps('products', Object(Phinx\Db\Util\AlterInstructions))
+#4 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\AdapterWrapper.php(497): Phinx\Db\Adapter\PdoAdapter->executeActions(Object(Phinx\Db\Table\Table), Array)
+#5 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\TimedOutputAdapter.php(406): Phinx\Db\Adapter\AdapterWrapper->executeActions(Object(Phinx\Db\Table\Table), Array)
+#6 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\AdapterWrapper.php(497): Phinx\Db\Adapter\TimedOutputAdapter->executeActions(Object(Phinx\Db\Table\Table), Array)
+#7 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Plan\Plan.php(161): Phinx\Db\Adapter\AdapterWrapper->executeActions(Object(Phinx\Db\Table\Table), Array)
+#8 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(65): Phinx\Db\Plan\Plan->Phinx\Db\Plan\{closure}(Object(Phinx\Db\Plan\AlterTable), 'products')
+#9 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Plan\Plan.php(162): Cake\Collection\Collection->each(Object(Closure))
+#10 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\ProxyAdapter.php(142): Phinx\Db\Plan\Plan->executeInverse(Object(Migrations\CakeAdapter))
+#11 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Migration\Manager\Environment.php(121): Phinx\Db\Adapter\ProxyAdapter->executeInvertedCommands()
+#12 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(391): Phinx\Migration\Manager\Environment->executeMigration(Object(CreateProductsTable), 'down', false)
+#13 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(533): Phinx\Migration\Manager->executeMigration('default', Object(CreateProductsTable), 'down', false)
+#14 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Console\Command\Rollback.php(130): Phinx\Migration\Manager->rollback('default', 20190818064548, false, true, false)
+#15 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Command\CommandTrait.php(35): Phinx\Console\Command\Rollback->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Command\Rollback.php(68): Migrations\Command\Rollback->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\xampp\htdocs\project_cake\vendor\symfony\console\Command\Command.php(255): Migrations\Command\Rollback->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(921): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(273): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Rollback), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(149): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(109): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\Shell.php(532): Migrations\Shell\MigrationsShell->main('migrations', 'rollback')
+#23 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(165): Cake\Console\Shell->runCommand(Array, true, Array)
+#24 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#25 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Migrations\Shell\MigrationsShell), Array)
+#26 C:\xampp\htdocs\project_cake\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#27 {main}
+
+
+2019-08-18 14:11:27 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'project_cake.products' in C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php on line 167
+Stack Trace:
+#0 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(167): PDO->exec('DROP TABLE `pro...')
+#1 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Util\AlterInstructions.php(137): Phinx\Db\Adapter\PdoAdapter->execute('DROP TABLE `pro...')
+#2 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(572): Phinx\Db\Util\AlterInstructions->execute('ALTER TABLE `pr...', Array)
+#3 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(931): Phinx\Db\Adapter\PdoAdapter->executeAlterSteps('products', Object(Phinx\Db\Util\AlterInstructions))
+#4 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\AdapterWrapper.php(497): Phinx\Db\Adapter\PdoAdapter->executeActions(Object(Phinx\Db\Table\Table), Array)
+#5 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\TimedOutputAdapter.php(406): Phinx\Db\Adapter\AdapterWrapper->executeActions(Object(Phinx\Db\Table\Table), Array)
+#6 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\AdapterWrapper.php(497): Phinx\Db\Adapter\TimedOutputAdapter->executeActions(Object(Phinx\Db\Table\Table), Array)
+#7 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Plan\Plan.php(161): Phinx\Db\Adapter\AdapterWrapper->executeActions(Object(Phinx\Db\Table\Table), Array)
+#8 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(65): Phinx\Db\Plan\Plan->Phinx\Db\Plan\{closure}(Object(Phinx\Db\Plan\AlterTable), 'products')
+#9 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Plan\Plan.php(162): Cake\Collection\Collection->each(Object(Closure))
+#10 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\ProxyAdapter.php(142): Phinx\Db\Plan\Plan->executeInverse(Object(Migrations\CakeAdapter))
+#11 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Migration\Manager\Environment.php(121): Phinx\Db\Adapter\ProxyAdapter->executeInvertedCommands()
+#12 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(391): Phinx\Migration\Manager\Environment->executeMigration(Object(CreateProductsTable), 'down', false)
+#13 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(533): Phinx\Migration\Manager->executeMigration('default', Object(CreateProductsTable), 'down', false)
+#14 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Console\Command\Rollback.php(130): Phinx\Migration\Manager->rollback('default', 20190818064548, false, true, false)
+#15 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Command\CommandTrait.php(35): Phinx\Console\Command\Rollback->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Command\Rollback.php(68): Migrations\Command\Rollback->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\xampp\htdocs\project_cake\vendor\symfony\console\Command\Command.php(255): Migrations\Command\Rollback->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(921): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(273): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Rollback), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(149): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(109): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\Shell.php(532): Migrations\Shell\MigrationsShell->main('migrations', 'rollback')
+#23 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(165): Cake\Console\Shell->runCommand(Array, true, Array)
+#24 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#25 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Migrations\Shell\MigrationsShell), Array)
+#26 C:\xampp\htdocs\project_cake\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#27 {main}
+
+
+2019-08-18 14:12:24 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'project_cake.products' in C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php on line 167
+Stack Trace:
+#0 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(167): PDO->exec('DROP TABLE `pro...')
+#1 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Util\AlterInstructions.php(137): Phinx\Db\Adapter\PdoAdapter->execute('DROP TABLE `pro...')
+#2 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(572): Phinx\Db\Util\AlterInstructions->execute('ALTER TABLE `pr...', Array)
+#3 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(931): Phinx\Db\Adapter\PdoAdapter->executeAlterSteps('products', Object(Phinx\Db\Util\AlterInstructions))
+#4 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\AdapterWrapper.php(497): Phinx\Db\Adapter\PdoAdapter->executeActions(Object(Phinx\Db\Table\Table), Array)
+#5 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\TimedOutputAdapter.php(406): Phinx\Db\Adapter\AdapterWrapper->executeActions(Object(Phinx\Db\Table\Table), Array)
+#6 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\AdapterWrapper.php(497): Phinx\Db\Adapter\TimedOutputAdapter->executeActions(Object(Phinx\Db\Table\Table), Array)
+#7 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Plan\Plan.php(161): Phinx\Db\Adapter\AdapterWrapper->executeActions(Object(Phinx\Db\Table\Table), Array)
+#8 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(65): Phinx\Db\Plan\Plan->Phinx\Db\Plan\{closure}(Object(Phinx\Db\Plan\AlterTable), 'products')
+#9 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Plan\Plan.php(162): Cake\Collection\Collection->each(Object(Closure))
+#10 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\ProxyAdapter.php(142): Phinx\Db\Plan\Plan->executeInverse(Object(Migrations\CakeAdapter))
+#11 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Migration\Manager\Environment.php(121): Phinx\Db\Adapter\ProxyAdapter->executeInvertedCommands()
+#12 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(391): Phinx\Migration\Manager\Environment->executeMigration(Object(CreateProductsTable), 'down', false)
+#13 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(533): Phinx\Migration\Manager->executeMigration('default', Object(CreateProductsTable), 'down', false)
+#14 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Console\Command\Rollback.php(130): Phinx\Migration\Manager->rollback('default', 20190818064548, false, true, false)
+#15 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Command\CommandTrait.php(35): Phinx\Console\Command\Rollback->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Command\Rollback.php(68): Migrations\Command\Rollback->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\xampp\htdocs\project_cake\vendor\symfony\console\Command\Command.php(255): Migrations\Command\Rollback->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(921): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(273): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Rollback), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(149): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(109): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\Shell.php(532): Migrations\Shell\MigrationsShell->main('migrations', 'rollback')
+#23 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(165): Cake\Console\Shell->runCommand(Array, true, Array)
+#24 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#25 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Migrations\Shell\MigrationsShell), Array)
+#26 C:\xampp\htdocs\project_cake\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#27 {main}
+
+
+2019-08-18 14:28:25 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'project_cake.products' in C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php on line 167
+Stack Trace:
+#0 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(167): PDO->exec('DROP TABLE `pro...')
+#1 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Util\AlterInstructions.php(137): Phinx\Db\Adapter\PdoAdapter->execute('DROP TABLE `pro...')
+#2 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(572): Phinx\Db\Util\AlterInstructions->execute('ALTER TABLE `pr...', Array)
+#3 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(931): Phinx\Db\Adapter\PdoAdapter->executeAlterSteps('products', Object(Phinx\Db\Util\AlterInstructions))
+#4 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\AdapterWrapper.php(497): Phinx\Db\Adapter\PdoAdapter->executeActions(Object(Phinx\Db\Table\Table), Array)
+#5 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\TimedOutputAdapter.php(406): Phinx\Db\Adapter\AdapterWrapper->executeActions(Object(Phinx\Db\Table\Table), Array)
+#6 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\AdapterWrapper.php(497): Phinx\Db\Adapter\TimedOutputAdapter->executeActions(Object(Phinx\Db\Table\Table), Array)
+#7 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Plan\Plan.php(161): Phinx\Db\Adapter\AdapterWrapper->executeActions(Object(Phinx\Db\Table\Table), Array)
+#8 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(65): Phinx\Db\Plan\Plan->Phinx\Db\Plan\{closure}(Object(Phinx\Db\Plan\AlterTable), 'products')
+#9 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Plan\Plan.php(162): Cake\Collection\Collection->each(Object(Closure))
+#10 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\ProxyAdapter.php(142): Phinx\Db\Plan\Plan->executeInverse(Object(Migrations\CakeAdapter))
+#11 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Migration\Manager\Environment.php(121): Phinx\Db\Adapter\ProxyAdapter->executeInvertedCommands()
+#12 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(391): Phinx\Migration\Manager\Environment->executeMigration(Object(CreateProductsTable), 'down', false)
+#13 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Migration\Manager.php(533): Phinx\Migration\Manager->executeMigration('default', Object(CreateProductsTable), 'down', false)
+#14 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Console\Command\Rollback.php(130): Phinx\Migration\Manager->rollback('default', 20190818064548, false, true, false)
+#15 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Command\CommandTrait.php(35): Phinx\Console\Command\Rollback->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Command\Rollback.php(68): Migrations\Command\Rollback->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\xampp\htdocs\project_cake\vendor\symfony\console\Command\Command.php(255): Migrations\Command\Rollback->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(921): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(273): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Rollback), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(149): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(109): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\Shell.php(532): Migrations\Shell\MigrationsShell->main('migrations', 'rollback')
+#23 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(165): Cake\Console\Shell->runCommand(Array, true, Array)
+#24 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#25 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Migrations\Shell\MigrationsShell), Array)
+#26 C:\xampp\htdocs\project_cake\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#27 {main}
+
+
+2019-08-18 14:33:32 Error: [InvalidArgumentException] There was a problem connecting to the database: SQLSTATE[HY000] [1049] Unknown database 'project_cake' in C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\MysqlAdapter.php on line 127
+Stack Trace:
+#0 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(136): Phinx\Db\Adapter\MysqlAdapter->connect()
+#1 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\AdapterWrapper.php(489): Phinx\Db\Adapter\PdoAdapter->getConnection()
+#2 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\CakeAdapter.php(56): Phinx\Db\Adapter\AdapterWrapper->getConnection()
+#3 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Command\CommandTrait.php(78): Migrations\CakeAdapter->__construct(Object(Phinx\Db\Adapter\TimedOutputAdapter), Object(Cake\Database\Connection))
+#4 C:\xampp\htdocs\project_cake\vendor\robmorgan\phinx\src\Phinx\Console\Command\Migrate.php(74): Migrations\Command\Migrate->bootstrap(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Command\CommandTrait.php(35): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Command\Migrate.php(67): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 C:\xampp\htdocs\project_cake\vendor\symfony\console\Command\Command.php(255): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(921): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(273): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 C:\xampp\htdocs\project_cake\vendor\symfony\console\Application.php(149): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(109): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\Shell.php(532): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#13 C:\xampp\htdocs\project_cake\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(165): Cake\Console\Shell->runCommand(Array, true, Array)
+#14 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#15 C:\xampp\htdocs\project_cake\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Migrations\Shell\MigrationsShell), Array)
+#16 C:\xampp\htdocs\project_cake\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#17 {main}
+
+
